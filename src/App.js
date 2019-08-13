@@ -9,7 +9,7 @@ export default class App extends React.Component {
   state = {
     breakL: 5,
     sessionL: 25,
-    timer: 1,
+    timer: 1500,
     start: false,
     timerType: 'Session'
   }
