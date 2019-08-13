@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components'
 import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css'
 
+import BeepSound from './components/BeepSound.wav'
+
 import Settings from './components/Settings'
 import Clock from './components/Clock'
 
@@ -9,7 +11,7 @@ export default class App extends React.Component {
   state = {
     breakL: 5,
     sessionL: 25,
-    timer: 1500,
+    timer: 1,
     start: false,
     timerType: 'Session'
   }
@@ -136,7 +138,7 @@ export default class App extends React.Component {
             />
           <audio 
             id="beep" 
-            src="https://goo.gl/65cBl1"
+            src={BeepSound}
             preload="auto"
             //creating ref without React.createRef
             ref={(audio) => {this.alarmSound = audio}}
